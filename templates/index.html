@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Payment Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Loan Payment Prediction System</h1>
+
+<!-- ================= SINGLE PREDICTION ================= -->
+<section class="card">
+    <h2>Single Borrower Prediction</h2>
+
+    <form id="singleForm" class="grid-form">
+        <input type="number" step="any" name="annual_income" placeholder="Annual Income" required>
+        <input type="number" step="any" name="debt_to_income_ratio" placeholder="Debt to Income Ratio" required>
+        <input type="number" step="any" name="credit_score" placeholder="Credit Score" required>
+        <input type="number" step="any" name="loan_amount" placeholder="Loan Amount" required>
+        <input type="number" step="any" name="interest_rate" placeholder="Interest Rate" required>
+
+        <select name="gender" required>
+            <option value="">Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <select name="marital_status" required>
+            <option value="">Marital Status</option>
+            <option>Single</option>
+            <option>Married</option>
+            <option>Divorced</option>
+            <option>Widowed</option>
+        </select>
+
+        <select name="education_level" required>
+            <option value="">Education Level</option>
+            <option>High School</option>
+            <option>Bachelor's</option>
+            <option>Master's</option>
+            <option>PhD</option>
+            <option>Other</option>
+        </select>
+
+        <select name="employment_status" required>
+            <option value="">Employment Status</option>
+            <option>Employed</option>
+            <option>Self-employed</option>
+            <option>Unemployed</option>
+            <option>Student</option>
+            <option>Retired</option>
+        </select>
+
+        <select name="loan_purpose" required>
+            <option value="">Loan Purpose</option>
+            <option>Business</option>
+            <option>Car</option>
+            <option>Debt consolidation</option>
+            <option>Education</option>
+            <option>Home</option>
+            <option>Medical</option>
+            <option>Other</option>
+            <option>Vacation</option>
+        </select>
+
+        <select name="grade_subgrade" required>
+            <option value="">Loan Grade</option>
+            <option>A1</option><option>A2</option><option>A3</option>
+            <option>A4</option><option>A5</option>
+            <option>B1</option><option>B2</option>
+            <option>C1</option><option>C2</option>
+        </select>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="singleResult" class="result-box"></div>
+</section>
+
+<!-- ================= CSV PREDICTION ================= -->
+<section class="card">
+    <h2>Batch Prediction (CSV Upload)</h2>
+    <input type="file" id="csvInput">
+    <button id="csvPredictBtn">Run CSV Prediction</button>
+
+    <div class="table-wrapper">
+        <table id="csvTable"></table>
+    </div>
+</section>
+
+<!-- ================= LOGS ================= -->
+<section class="card">
+    <h2>Prediction History</h2>
+    <button onclick="loadLogs()">Load History</button>
+
+    <div class="table-wrapper">
+        <table id="logsTable"></table>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

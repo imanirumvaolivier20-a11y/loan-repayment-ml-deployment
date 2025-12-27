@@ -1,0 +1,11 @@
+annual_income,debt_to_income_ratio,credit_score,loan_amount,interest_rate,gender,marital_status,education_level,employment_status,loan_purpose,grade_subgrade,Actual,Predicted,Probability_Paid_Back
+53735.45,0.172,695,23254.21,10.7,Male,Single,Bachelor's,Employed,Debt consolidation,C3,1.0,1.0,0.8660600251706854
+38883.01,0.079,721,7095.54,14.49,Female,Married,Bachelor's,Employed,Home,C4,1.0,1.0,0.9822273164538277
+61396.12,0.082,730,26296.61,12.11,Male,Married,Bachelor's,Unemployed,Business,C4,0.0,0.0,0.27847356538608425
+45964.21,0.098,653,23706.04,12.05,Female,Single,Bachelor's,Employed,Debt consolidation,D5,1.0,1.0,0.8836952709255793
+41045.25,0.068,641,18889.71,9.99,Male,Single,Bachelor's,Employed,Medical,D4,1.0,1.0,0.905464892243235
+47746.38,0.103,674,17888.95,11.2,Male,Married,High School,Retired,Medical,C4,1.0,1.0,0.9967858667293503
+67250.05,0.11,566,18895.02,15.3,Female,Married,Bachelor's,Employed,Debt consolidation,F3,1.0,1.0,0.7597640454838294
+33006.61,0.208,692,751.44,12.28,Male,Divorced,Master's,Employed,Home,C2,1.0,1.0,0.7828307356492431
+49550.24,0.123,675,7758.34,12.05,Female,Married,Bachelor's,Self-employed,Other,C3,1.0,1.0,0.952968217631844
+30406.68,0.158,699,12557.03,9.94,Male,Single,High School,Employed,Debt consolidation,C4,1.0,1.0,0.9401299740072127

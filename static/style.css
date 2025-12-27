@@ -1,0 +1,162 @@
+/* =====================
+   GLOBAL
+===================== */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #0f0f0f;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px;
+}
+
+h1 {
+    text-align: center;
+    color: #00c853;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #00c853;
+}
+
+/* =====================
+   CARDS
+===================== */
+.card {
+    background: #1a1a1a;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+}
+
+/* =====================
+   FORM
+===================== */
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 6px;
+}
+
+.grid-form input,
+.grid-form select {
+    padding: 5px 6px;
+    font-size: 11px;
+    background: #111;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+.grid-form button {
+    grid-column: span 2;
+    padding: 6px;
+    font-size: 12px;
+    background: #00c853;
+    border: none;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.grid-form button:hover {
+    background: #00e676;
+}
+
+/* =====================
+   RESULT BOX
+===================== */
+.result-box {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #00e676;
+}
+
+/* =====================
+   CSV CONTROLS
+===================== */
+.csv-controls {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.csv-controls button {
+    padding: 5px 8px;
+    font-size: 11px;
+    background: #00c853;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* =====================
+   TABLE
+===================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#logsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    table-layout: fixed;
+}
+
+#logsTable th,
+#logsTable td {
+    padding: 6px 4px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#logsTable th {
+    background: #004d25;
+    color: white;
+    font-size: 11px;
+}
+
+#logsTable tr:nth-child(even) {
+    background: #161616;
+}
+
+#logsTable tr:hover {
+    background: #1f1f1f;
+}
+
+/* =====================
+   RESPONSIVE HIDING
+===================== */
+@media (max-width: 900px) {
+    #logsTable th:nth-child(1),
+    #logsTable td:nth-child(1),
+    #logsTable th:nth-child(2),
+    #logsTable td:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    #logsTable th:nth-child(3),
+    #logsTable td:nth-child(3),
+    #logsTable th:nth-child(4),
+    #logsTable td:nth-child(4) {
+        display: none;
+    }
+}
